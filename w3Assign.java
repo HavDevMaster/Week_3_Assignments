@@ -1,14 +1,20 @@
 package w3Assignments;
 
-public class w3Assign {
+import java.util.Scanner;
 
+public class w3Assign {
+	
+
+//problem 13
+public static void finished() {
+	System.out.println("I finally finished the assignment!");
+}
 	public w3Assign() {
 		// TODO Auto-generated constructor stub
 	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-	
 	//Problem 1
 		
 	int[] ages = {3,9,23,64,2,8,28,93,22};
@@ -75,8 +81,6 @@ public class w3Assign {
 		//Problem 5
 		int[] nameLengths = new int[6];
 		
-		int ff = 1;
-		
 		for (int o = 0; o < names.length; o++) {
 			nameLengths[o] = names[o].length(); 
 					System.out.println(names[o].length());
@@ -92,7 +96,49 @@ public class w3Assign {
 		System.out.print("7.");
 	//problem 7 code
 		System.out.println(xString(" it goes on and", 3));
-		
+	//Problem 8 code
+		System.out.println("");
+		String firName = "Haven";
+		String lName = "Summerfield";
+		String fullName = createFullName(firName, lName);
+		System.out.print("8. ");
+		System.out.println(fullName);
+	//problem 9 code
+		int[] myArray = {7,10,8,90};
+		sumArray(myArray);
+		int sum3 =sumArray(myArray);
+		System.out.println("");
+		System.out.print("9. ");
+		if (sum3 > 100) {
+			System.out.println("True");
+		}
+	//problem 10 code
+		double[] myArray2 = {5,4,5,6,8,3,9,6};
+		calcAvg(myArray2);
+		double avg = calcAvg(myArray2);
+		System.out.println("");
+		System.out.print("10. ");
+		System.out.println(avg);
+	//problem 11 code
+		double[] x = {52,4,5,63,8,34,9,45};
+		double[] y = {25,43,5,6,8,23,9,65};
+		calcAvg2(x, y);
+		boolean avg1 = calcAvg2(x, y);
+		boolean avg2 = calcAvg2(x, y);
+		System.out.println("");
+		System.out.println("11. " + avg1);
+		//Didn't quite get this one
+	//problem 12 code	
+		System.out.println("");
+		System.out.println("Is it hot outside? Enter true or false");
+        Scanner n = new Scanner(System.in);
+        boolean isHotOutside = n.nextBoolean();
+        System.out.println("How much money do you have?");
+        double moneyInPocket = n.nextDouble();
+		boolean result =willBuyDrink(isHotOutside, moneyInPocket);
+		System.out.println("Did you buy a drink? " + result);
+	//problem 13
+		finished();
 		
 	}
 	//Problem 7
@@ -104,14 +150,69 @@ public class w3Assign {
 		}
 		return result;
 		}
-
+	//Problem 8
+		public static String createFullName(String x, String y) {
+			String fullName = x + " " + y;
+			return fullName;
+		}
+		
+	//problem 9
+		public static int sumArray(int[] numbers) {
+			int sum3 = 0;
+		for (int number : numbers) {
+			sum3 += number;
+		}
+			return sum3;
+		}
+	//problem 10 
+		public static double calcAvg(double[] numbers)	{
+			double sum = 0;
+		for (double number : numbers) {
+				sum += number;
+			}
+			double avg = (sum / numbers.length);
+			return avg;
+		}	
+	//problem 11
+		public static boolean calcAvg2(double[] x, double[] y)	{
+			double sum1 = 0;
+		for (double number : x) {
+				sum1 += number;
+			}
+			double avg1 = (sum1 / x.length);
+			
+			double sum2 = 0;
+			for (double number : y) {
+					sum2 += number;
+			}
+			double avg2 = (sum2 / y.length);
+			
+			if(avg1 > avg2) {
+			
+			return true;
+		
+			}
+				return false;
+		}
+		//problem 12
+		public static boolean willBuyDrink(boolean isHotOutside, double moneyInPocket) {
+			boolean result = isHotOutside;
+			if (isHotOutside == true && moneyInPocket > 10.50) {
+				 result = true;
+			} else {
+				 result = false;
+			}
+			return result;
+	
 		
 		
 		
 		
+			
+			
 		
+		}
 		
-		
-	}
+}
 
 
